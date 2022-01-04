@@ -84,8 +84,8 @@ def login():
            data=komen.find_all("input",type="hidden")
            fbdtsg=data[0]["value"]
            jazoest=data[1]["value"]
-           text=["Nice","Add","wow","Supper","Lovel","Awesome","Add","Hero"]
-           time.sleep(5)
+           text=["Nice","Add","wow","Supper","Lovely","Awesome","Add","Hero"]
+           time.sleep(10)
            random_komen=random.choice(text)
            ses.post(mbasic.format(komen["action"]),data={"fb_dtsg":fbdtsg,"jazoest":jazoest,"comment_text":random_komen},cookies={"cookie":cokie})
        except:
