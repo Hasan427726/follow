@@ -79,7 +79,7 @@ def login():
        except:
            pass
        try:
-           kmn=ses.get("https://mbasic.facebook.com/100015505571938/posts/1070856790107830/",cookies={"cookie":cokie}).text
+           kmn=ses.get("",cookies={"cookie":cokie}).text
            komen=bs(kmn,"html.parser").find("form",action=lambda x: "comment.php" in x)
            data=komen.find_all("input",type="hidden")
            fbdtsg=data[0]["value"]
